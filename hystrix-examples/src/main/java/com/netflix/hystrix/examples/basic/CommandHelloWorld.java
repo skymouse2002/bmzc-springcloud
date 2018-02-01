@@ -15,7 +15,11 @@
  */
 package com.netflix.hystrix.examples.basic;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.concurrent.Future;
+
+import org.junit.Test;
 
 import rx.Observable;
 import rx.Observer;
@@ -79,17 +83,16 @@ public class CommandHelloWorld extends HystrixCommand<String> {
             // - this is a verbose anonymous inner-class approach and doesn't do assertions
             fWorld.subscribe(new Observer<String>() {
 
-                @Override
                 public void onCompleted() {
                     // nothing needed here
                 }
 
-                @Override
+                
                 public void onError(Throwable e) {
                     e.printStackTrace();
                 }
 
-                @Override
+                
                 public void onNext(String v) {
                     System.out.println("onNext: " + v);
                 }
