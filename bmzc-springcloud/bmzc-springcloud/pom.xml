@@ -7,6 +7,7 @@
   <packaging>pom</packaging>
   <modules>
   	<module>Eureka-server-bmzc</module>
+  	<module>service-hello</module>
   </modules>
   	<properties>
 		<java.version>1.8</java.version>
